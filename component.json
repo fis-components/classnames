@@ -1,0 +1,9 @@
+{
+    "repos": "https://github.com/JedWatson/classnames.git",
+    "name": "classnames",
+    "main": "index.js",
+    "description": "A simple utility for conditionally joining classNames together",
+    "tag": "master",
+    "reposType": "npm",
+    "version": "2.2.0"
+}
