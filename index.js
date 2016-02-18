@@ -1,3 +1,10 @@
+/*
+  Copyright (c) 2015 Jed Watson.
+  
+  Licensed under the MIT License (MIT), see
+  https://github.com/JedWatson/classnames/blob/master/LICENSE
+*/
+
 function classNames() {
 	var classes = '';
 	var arg;
@@ -24,7 +31,14 @@ function classNames() {
 	return classes.substr(1);
 }
 
-// safely export classNames in case the script is included directly on a page
+// safely export classNames for node / browserify
 if (typeof module !== 'undefined' && module.exports) {
 	module.exports = classNames;
+}
+
+// safely export classNames for RequireJS
+if (typeof define !== 'undefined' && define.amd) {
+	define('classnames', [], function() {
+		return classNames;
+	});
 }
